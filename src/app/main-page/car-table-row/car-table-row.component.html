@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table  class="cs-table table table-striped">
+        <thead>
+          <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Rok produkcji</th>
+            <th>Rodzaj paliwa</th>
+            <th>Przebieg</th>
+            <th>Cena</th>
+            <th>Moc KM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars; let i=index" >
+            <td>{{car.marka}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.rokProdukcji}}</td>
+            <td>{{car.paliwo}}</td>
+            <td>{{car.przebieg}}</td>
+            <td>{{car.moc}}</td>
+            <td>{{car.cena}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
+</div>
