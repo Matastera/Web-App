@@ -1,9 +1,27 @@
+<a>
+    <img id="logo" class="logo" src="assets/log_test.png"/>
+    </a>
+<div class="search">
+<h1>Search</h1> 
+<form class="form-search">
+    <input [(ngModel)]="marka" name="marka" type="text" class="form-control" placeholder="Marka">
+    <input [(ngModel)]="model" name="model" type="text" class="form-control" placeholder="Model">
+    <button>SEARCH</button> 
+  </form>
+
+
+
+
+</div>    
 <div class="sidebar">
   <nav>
 <ul>
+  </ul>
 <li (click)="ReDirect('login')">Login</li>
 <li (click)="ReDirect('register')">Register</li>
-<li>Search</li>
-</ul>
+<!--<li>Search</li>-->
+
   </nav>
 </div>
+
+
