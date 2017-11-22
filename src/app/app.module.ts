@@ -13,6 +13,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
+import { AdminComponent } from './admin/admin.component';
+import { AddNewComponent } from './add-new/add-new.component';
 
 
 
@@ -23,7 +25,9 @@ import { UserComponent } from './user/user.component';
     SideBarComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    AdminComponent,
+    AddNewComponent
   ],
   imports: [
     BrowserModule,

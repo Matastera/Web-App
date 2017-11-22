@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>Dodaj ogłoszenie</h2>
+    <form #addCarForm="ngForm" (submit)="save()">
+        <div>
+            <label for="marka">Marka</label>
+            <select [(ngModel)]="dataModel.marka" name="marka" id="marka" required>
+        <option *ngFor="let marka of marki" [value]="marka">{{marka}}</option>
+    </select>
+        </div>
+
+        <div>
+            <label for="model">Model</label>
+            <input [(ngModel)]="dataModel.model" type="text" name="model" id="model" #model="ngModel" required/>
+            <div [hidden]="model.valid || model.pristine" class="alert alert-danger">
+                Proszę podać model auta
+            </div>
+        </div>
+        <div>
+            <label for="rokProdukcji">Rok produkcji</label>
+            <input [(ngModel)]="dataModel.rokProdukcji" type="text" name="rokProdukcji" id="rokProdukcji" #rokProdukcji="ngModel"required />
+        <div [hidden]="rokProdukcji.valid || rokProdukcji.pristine" class="alert alert-danger">
+                Proszę podać rok produkcji auta
+            </div>
+        </div>
+        <div>
+            <label for="moc">Moc</label>
+            <input [(ngModel)]="dataModel.moc" type="number" name="moc" id="moc" required min="0.1"/></div>
+        <div>
+            <label for="cena">Cena</label>
+            <input [(ngModel)]="dataModel.cena" type="number" name="cena" id="cena" required min="0.1"/></div>
+
+        <div>
+            <label for="paliwo">Paliwo</label>
+            <select [(ngModel)]="dataModel.paliwo" name="paliwo" id="paliwo" required>
+            <option *ngFor="let paliwo of typyPaliwa" [value]="paliwo">{{paliwo}}</option>
+        </select></div>
+        <div>
+            <label for="przebieg">Przebieg</label>
+            <input [(ngModel)]="dataModel.przebieg" type="number" name="przebieg" id="przebieg" required min="0.1"/></div>
+        <div>
+            <label for="firstName">Imię</label>
+            <input [(ngModel)]="dataModel.client.firstName" type="text" name="firstName" id="firstName" required/></div>
+        <div>
+            <label for="surname">Nazwisko</label>
+            <input [(ngModel)]="dataModel.client.surname" type="text" name="surname" id="surname" required/></div>
+
+        <button type="submit" [disabled]="!addCarForm.form.valid"> Dodaj </button>
+
+    </form>
+</div>
